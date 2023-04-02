@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        color: purple;
+    }
+
+    .number {
+        margin: 0px;
+    }
+
+    #add {
+
+        background-color: royalblue;
+    }
+
+    #subtraction {
+
+        background-color: burlywood;
+    }
+
+    #multiplication {
+
+        background-color: chocolate;
+    }
+
+    #division {
+        border-radius: ;
+        background-color: peru;
+
+    }
+
+    #mod {
+            
+        background-color: antiquewhite;
+
+    }
+
+    #clear {
+        background-color: beige;
+    }
+
+</style>
+
+<body>
+    <div class="calculator">
+
+        <h1>CALCULATOR</h1>
+        <div class="number">
+            <input type="text" id="number1" placeholder="số thứ nhất">
+            <input type="text" id="number2" placeholder="số thứ hai">
+        </div>
+        <div class="calculators">
+            <button id="add" onclick="add()">+</button>
+            <button id="subtraction" onclick="subtraction()">-</button>
+            <button id="multiplication" onclick="multiplication()">x</button>
+            <button id="division" onclick="division()">:</button>
+            <button id="mod" onclick="mod()">%</button>
+            <button id="clear" onclick="clearInput()">clear</button>
+        </div>
+
+        <div class="result">
+            <div class="equalsign">=</div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+</body>
+<script>
+    function add() {
+        let a = Number(document.getElementById("number1").value);
+        let b = Number(document.getElementById("number2").value);
+        let c = a + b
+        document.getElementById("result").innerHTML = c
+
+    }
+    function subtraction() {
+        let d = Number(document.getElementById("number1").value);
+        let e = Number(document.getElementById("number2").value);
+        let f = d - e
+        document.getElementById("result").innerHTML = f
+    }
+    function multiplication() {
+        let h = Number(document.getElementById("number1").value);
+        let g = Number(document.getElementById("number2").value);
+        let i = g * h
+        document.getElementById("result").innerHTML = i
+    }
+    function division() {
+        let j = Number(document.getElementById("number1").value);
+        let k = Number(document.getElementById("number2").value);
+        let l = j / k
+        document.getElementById("result").innerHTML = l
+    }
+    function mod() {
+        let m = Number(document.getElementById("number1").value);
+        let n = Number(document.getElementById("number2").value);
+        let o = m % n
+        document.getElementById("result").innerHTML = o
+    }
+    function clearInput() {
+        document.getElementById("number1").value = " ";
+        document.getElementById("number2").value = " ";
+        document.getElementById("result").innerHTML = " ";
+        document.getElementById("number1").placeholder = "số thứ nhất";
+        document.getElementById("number2").placeholder = "số thứ hai";
+    }
+
+
+</script>
+</body>
+
+</html>
